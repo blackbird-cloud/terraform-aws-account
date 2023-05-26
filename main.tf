@@ -16,5 +16,11 @@ data "aws_iam_roles" "roles" {
 }
 
 data "aws_organizations_organizational_units" "default" {
+  count = data.aws_organizations_organization.default.roots != null ? 1 : 0
+
   parent_id = data.aws_organizations_organization.default.roots[0].id
+}
+
+data "aws_organizations_delegated_services" "default" {
+  account_id = data.aws_caller_identity.default.account_id
 }

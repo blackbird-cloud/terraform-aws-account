@@ -15,7 +15,7 @@ output "organization" {
 }
 
 output "organizational_units" {
-  value = data.aws_organizations_organizational_units.default
+  value = try(data.aws_organizations_organizational_units.default[0], null)
 }
 
 output "sso_roles" {
@@ -26,4 +26,8 @@ output "sso_roles" {
       arn_no_path : "arn:aws:iam::${data.aws_caller_identity.default.account_id}:role/${[for name in role.names : name][0]}"
     }
   }
+}
+
+output "delegated_services" {
+  value = data.aws_organizations_delegated_services.default
 }
