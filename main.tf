@@ -20,7 +20,3 @@ data "aws_organizations_organizational_units" "default" {
 
   parent_id = data.aws_organizations_organization.default.roots[0].id
 }
-
-data "aws_organizations_delegated_services" "default" {
-  account_id = data.aws_caller_identity.default.account_id
-}

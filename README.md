@@ -23,7 +23,6 @@ No modules.
 |------|------|
 | [aws_caller_identity.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) | data source |
 | [aws_iam_roles.roles](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_roles) | data source |
-| [aws_organizations_delegated_services.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/organizations_delegated_services) | data source |
 | [aws_organizations_organization.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/organizations_organization) | data source |
 | [aws_organizations_organizational_units.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/organizations_organizational_units) | data source |
 | [aws_partition.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/partition) | data source |
@@ -39,7 +38,6 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_"></a> [](#output\_) | n/a |
 | <a name="output_account_id"></a> [account\_id](#output\_account\_id) | n/a |
 | <a name="output_organization"></a> [organization](#output\_organization) | n/a |
 | <a name="output_organizational_units"></a> [organizational\_units](#output\_organizational\_units) | n/a |

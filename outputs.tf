@@ -27,7 +27,3 @@ output "sso_roles" {
     }
   }
 }
-
-output "delegated_services" {
-  value = data.aws_organizations_delegated_services.default
-}
