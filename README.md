@@ -1,4 +1,16 @@
-[![blackbird-logo](https://raw.githubusercontent.com/blackbird-cloud/terraform-module-template/main/.config/logo_simple.png)](https://blackbird.cloud)
+<!-- BEGIN_TF_DOCS -->
+# AWS Account information Terraform module
+A Terraform module which uses a number of datasources to read information about the current AWS account. Handy when used in combination with Terragrunt, one will have fewer variables to hardcode on the Terragrunt files.
+
+[![blackbird-logo](https://raw.githubusercontent.com/blackbird-cloud/terraform-module-template/main/.config/logo_simple.png)](https://www.blackbird.cloud)
+
+## Example
+```hcl
+module "account_info" {
+  source  = "blackbird-cloud/account-info/aws"
+  version = "~> 1"
+}
+```
 
 ## Requirements
 
@@ -11,11 +23,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.67.0 |
-
-## Modules
-
-No modules.
+| <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 4 |
 
 ## Resources
 
@@ -32,18 +40,18 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_aws_sso_permission_sets"></a> [aws\_sso\_permission\_sets](#input\_aws\_sso\_permission\_sets) | (Optional) List of permission-set names for which to retrieve the IAM roles. | `list(string)` | <pre>[<br>  "AdministratorAccess"<br>]</pre> | no |
+| <a name="input_aws_sso_permission_sets"></a> [aws\_sso\_permission\_sets](#input\_aws\_sso\_permission\_sets) | (Optional) List of permission-set names for which to retrieve the IAM roles. | `list(string)` | `[]` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_account_id"></a> [account\_id](#output\_account\_id) | n/a |
-| <a name="output_organization"></a> [organization](#output\_organization) | n/a |
-| <a name="output_organizational_units"></a> [organizational\_units](#output\_organizational\_units) | n/a |
-| <a name="output_partition"></a> [partition](#output\_partition) | n/a |
-| <a name="output_region"></a> [region](#output\_region) | n/a |
-| <a name="output_sso_roles"></a> [sso\_roles](#output\_sso\_roles) | n/a |
+| <a name="output_account_id"></a> [account\_id](#output\_account\_id) | The account's account id. |
+| <a name="output_organization"></a> [organization](#output\_organization) | The account's organization. |
+| <a name="output_organizational_units"></a> [organizational\_units](#output\_organizational\_units) | The account's organizational units. Is empty on non management-account. |
+| <a name="output_partition"></a> [partition](#output\_partition) | The account's partition. |
+| <a name="output_region"></a> [region](#output\_region) | The current region. |
+| <a name="output_sso_roles"></a> [sso\_roles](#output\_sso\_roles) | The roles created by the IAM Identity Center, configure the variable `aws_sso_permission_sets` when you want to retrieve these. |
 
 ## About
 
@@ -53,4 +61,5 @@ Checkout our other :point\_right: [terraform modules](https://registry.terraform
 
 ## Copyright
 
-Copyright © 2017-2023 [Blackbird Cloud](https://blackbird.cloud)
+Copyright © 2017-2023 [Blackbird Cloud](https://www.blackbird.cloud)
+<!-- END_TF_DOCS -->
