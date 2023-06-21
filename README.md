@@ -1,6 +1,6 @@
 <!-- BEGIN_TF_DOCS -->
 # AWS Account information Terraform module
-A Terraform module which uses a number of datasources to read information about the current AWS account.
+A Terraform module which uses a number of datasources to read information about the current AWS account. Handy when used in combination with Terragrunt, one will have fewer variables to hardcode on the Terragrunt files.
 
 [![blackbird-logo](https://raw.githubusercontent.com/blackbird-cloud/terraform-module-template/main/.config/logo_simple.png)](https://www.blackbird.cloud)
 
