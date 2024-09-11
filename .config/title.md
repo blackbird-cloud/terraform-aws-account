@@ -1,0 +1,2 @@
+# Terraform Aws Account Info Module
+A Terraform module which uses a number of datasources to read information about the current AWS account. Handy when used in combination with Terragrunt, one will have fewer variables to hardcode on the Terragrunt files.
