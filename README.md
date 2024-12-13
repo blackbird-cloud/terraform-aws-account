@@ -8,7 +8,7 @@ A Terraform module which uses a number of datasources to read information about 
 ```hcl
 module "account_info" {
   source  = "blackbird-cloud/account-info/aws"
-  version = "~> 1"
+  version = "~> 2"
 }
 ```
 
@@ -17,13 +17,13 @@ module "account_info" {
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 4 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 4 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 4 |
 
 ## Resources
 
